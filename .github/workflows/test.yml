@@ -1,10 +1,8 @@
-name: demi workflow
-on: workflow_dispatch 
+name: first action
+on: workflow_dispatch
 jobs:
-    first_jobs:
+    first_run:
         runs-on: ubuntu-latest
         steps:
-            - name: Hello world
-              run: |
-                  echo "Hello World"
-                  echo "Good Bye World"
+            - name: first dry run
+              run: echo "my name is sehindemi"
