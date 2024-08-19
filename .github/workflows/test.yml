@@ -1,8 +1,17 @@
-name: job info
-on: workflow_dispatch
+name: Test Project 
+on: push
 jobs:
-    info:
+    test_job:
         runs-on: ubuntu-latest
         steps:
-            - name: info
-              run: echo "${{tojson(github)}}"
+            - name: code repo
+              uses: actions/checkout@v4
+            
+            - name: installing nodejs 18
+              uses: actions/setup-node@v4
+
+            - name: installing dependcies
+              run: npm ci
+
+            - name: running test 
+              run: npm test 
