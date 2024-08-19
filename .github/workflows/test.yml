@@ -1,8 +1,8 @@
-name: first action
+name: sehindemi-test
 on: workflow_dispatch
 jobs:
-    first_run:
+    sehindemi:
         runs-on: ubuntu-latest
         steps:
-            - name: first dry run
-              run: echo "my name is sehindemi"
+            - name: sehindemi name
+              run: echo "Sehindemi is my name"
