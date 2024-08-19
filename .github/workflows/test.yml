@@ -1,8 +1,10 @@
-name: sehindemi-test
+name: section-actions
 on: workflow_dispatch
 jobs:
-    sehindemi:
+    hello_world:
         runs-on: ubuntu-latest
         steps:
-            - name: sehindemi name
-              run: echo "Sehindemi is my name"
+            - name: hello world
+              run: |
+                    echo "Hello World"
+                    echo "Bye World"
