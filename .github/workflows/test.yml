@@ -1,17 +1,35 @@
-name: Test Project 
+name: deploy project
 on: push
 jobs:
-    test_job:
-        runs-on: ubuntu-latest
-        steps:
-            - name: code repo
-              uses: actions/checkout@v4
-            
-            - name: installing nodejs 18
-              uses: actions/setup-node@v4
+  test_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get git code
+        uses: actions/checkout@v4
+      
+      - name: installing node js
+        uses: actions/setup-node@v4
 
-            - name: installing dependcies
-              run: npm ci
+      - name: installing dependcies 
+        run: npm  ci
 
-            - name: running test 
-              run: npm test 
+      - name: testing 
+        run: npm test 
+
+  deploy_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get git code
+        uses: actions/checkout@v4
+      
+      - name: installing node js
+        uses: actions/setup-node@v4
+
+      - name: installing dependcies 
+        run: npm  ci
+      
+      - name: build project
+        run: npm build
+
+      - name: echo project
+        run: echo project 
