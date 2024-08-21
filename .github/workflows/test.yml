@@ -29,7 +29,7 @@ jobs:
         run: npm  ci
       
       - name: build project
-        run: npm build
+        run: npm run build
 
       - name: echo project
         run: echo project 
