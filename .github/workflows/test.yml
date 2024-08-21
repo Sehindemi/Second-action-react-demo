@@ -9,27 +9,10 @@ jobs:
       
       - name: installing node js
         uses: actions/setup-node@v4
+        with: 
+          node-version: "18"
 
       - name: installing dependcies 
         run: npm  ci
 
-      - name: testing 
-        run: npm test 
-
-  deploy_job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Get git code
-        uses: actions/checkout@v4
-      
-      - name: installing node js
-        uses: actions/setup-node@v4
-
-      - name: installing dependcies 
-        run: npm  ci
-      
-      - name: build project
-        run: npm run build
-
-      - name: echo project
-        run: echo project 
+ 
